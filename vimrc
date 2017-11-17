@@ -27,16 +27,44 @@ Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Note: fugitive provides git-blame as :Gblame
 
 " Map NERDTree
-map <Leader>f :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeMapActivateNode='<right>'
 let NERDTreeShowHidden=1
 " Locate focused file
 nmap <Leader>l :NERDTreeFind<CR>
+
+" Open split panes to right and bottom
+set splitbelow
+set splitright
+
+" Map split navigation to Ctrl-[hjkl]
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Map [number]<Enter> to jumping to line number
+nnoremap <CR> G
+
+" Map keypad enter to normal enter
+nmap <kEnter> <Enter>
+
+"Resizing splits:
+"  Max height: <C-W>_
+"  Max width:  <C-W>|
+"  Normalize:  <C-W>=
+"Other split manipulations
+"  Swap top/bottom or left/right:                       <C-W>r
+"  Break out of current window into new tabview:        <C-W>t
+"  Close every window in current tab view except one:   <C-W>o
+"Help    :help splits
 
 " Enable Lightline
 set laststatus=2
