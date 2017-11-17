@@ -54,9 +54,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Highlight found words in search
 set hlsearch
 " Map hightlight toggle to <Leader>h
-map <Leader>h :set hls!<CR>
-imap <Leader>h <ESC>:set hls!<CR>a
-vmap <Leader>h <ESC>:set hls!<CR>gv
+nnoremap <Leader>h :set invhlsearch<CR>
 
 "Highlight matching parens
 set showmatch
