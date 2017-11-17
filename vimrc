@@ -24,10 +24,23 @@ set guifont=Hack\ Regular:h18
 " Plugins (vim-plug)
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
 call plug#end()
 
-" Map NERDTree to <Leader>f
+" Note: fugitive provides git-blame as :Gblame
+
+" Map NERDTree
 map <Leader>f :NERDTreeToggle<CR>
+let NERDTreeMapActivateNode='<right>'
+let NERDTreeShowHidden=1
+" Locate focused file
+nmap <Leader>l :NERDTreeFind<CR>
+
+" Enable Lightline
+set laststatus=2
+set noshowmode
 
 " Column warning
 set colorcolumn=100
