@@ -6,7 +6,12 @@ let mapleader=" "
 " Reload .vimrc with <leader>s without restarting vim
 map <leader>s :source ~/.vimrc<CR>
 
+" Enable mouse
 set mouse=a
+
+" Global X selection buffer (yank and paste across instances)
+set clipboard=unnamed
+
 
 "
 filetype on
