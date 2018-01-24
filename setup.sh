@@ -6,4 +6,4 @@ ln -s ~/.vim/vimrc ~/.vimrc
 mkdir -p ~/.config/nvim
 ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 
-vim +PlugInstall
+vim +PlugInstall +qall
